@@ -1,6 +1,7 @@
 const Event = require('../../models/event');
 const { transformEvent } = require('./merge');
 
+
 module.exports = {
 	events: async () => {
 		try {

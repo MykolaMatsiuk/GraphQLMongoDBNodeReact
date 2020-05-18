@@ -2,6 +2,7 @@ const Booking = require('../../models/booking');
 const Event = require('../../models/event');
 const { transformEvent, transformBooking } = require('./merge');
 
+
 module.exports = {
 	bookings: async () => {
 		try {
