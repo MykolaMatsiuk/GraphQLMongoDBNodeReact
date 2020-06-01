@@ -32,9 +32,11 @@ module.exports = {
 
 		if (!isEqual) throw new Error('Password is incorrect!');
 
-		const token = jwt.sign({ userId: user.id, email: user.email }, 'somesupersecretkey', {
-			expiresIn: '1h'
-		});
+		const token = jwt.sign(
+			{ userId: user.id, email: user.email },
+			'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZWJlNzM2MTBhNzZmMDM1ZjQ1NzFiZDciLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE1OTEwMTUwMDQsImV4cCI6MTU5MTAxODYwNH0.iexAX0hwM38bC1kh4AAUjRmUVN5XQ8tqW_49m4O7DDE',
+			{ expiresIn: '1h' }
+		);
 
 		return {
 			userId: user.id,
